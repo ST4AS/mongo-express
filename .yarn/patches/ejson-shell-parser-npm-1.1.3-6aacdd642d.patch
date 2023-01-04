@@ -15,7 +15,7 @@ index dd902df0f84ca691a699c867fbd8c723652a3bcd..07db9655afec553fee2ec25b19530441
    },
    UUID: function UUID(u) {
 -    return new bson__namespace.Binary(Buffer.from(u.replace(/-/g, ''), 'hex'), 4);
-+    return new bson__namespace.Binary(Buffer.from((u || crypto.randomUUID()).replace(/-/g, ''), 'hex'), 4);
++    return new bson__namespace.Binary(Buffer.from((u || crypto.randomUUID()).replaceAll('-', ''), 'hex'), 4);
    },
    Code: function Code(c, s) {
      return new bson__namespace.Code(c, s);
@@ -36,7 +36,7 @@ index dd902df0f84ca691a699c867fbd8c723652a3bcd..07db9655afec553fee2ec25b19530441
    },
    UUID: function UUID(u) {
 -    return new bson__namespace.Binary(Buffer.from(u.replace(/-/g, ''), 'hex'), 4);
-+    return new bson__namespace.Binary(Buffer.from((u || crypto.randomUUID()).replace(/-/g, ''), 'hex'), 4);
++    return new bson__namespace.Binary(Buffer.from((u || crypto.randomUUID()).replaceAll('-', ''), 'hex'), 4);
    },
    Code: function Code(c, s) {
      return new bson__namespace.Code(c, s);
