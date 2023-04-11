@@ -98,7 +98,7 @@
     "cy:run": "cypress run",
     "mocha": "NODE_ENV=test mocha",
     "test-watch": "NODE_ENV=test mocha --watch --reporter spec",
-    "prepublish": "yarn build"
+    "prepublish": "yarn install && yarn build"
   },
   "pre-commit": [
     "test"
